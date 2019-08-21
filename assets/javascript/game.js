@@ -16,7 +16,7 @@ var randomWordArray = [
 randomWord = randomWordArray[Math.floor(Math.random() * randomWordArray.length)];
 console.log(randomWord);
 
-function chooseFruit() {
+function chooseWord() {
     randomWord = randomWordArray[Math.floor(Math.random() * randomWordArray.length)];
     console.log(randomWord);
 }
@@ -69,7 +69,7 @@ document.onkeyup = function (event) {
         count = 12;
         guessedArray = [];
         startGame();
-        chooseFruit();
+        chooseWord();
     }
 
     // here's what happens if you WIN
@@ -80,7 +80,7 @@ document.onkeyup = function (event) {
         count = 12;
         guessedArray = [];
         startGame();
-        chooseFruit();
+        chooseWord();
     }
 
     // here's what happens when you guess letters
