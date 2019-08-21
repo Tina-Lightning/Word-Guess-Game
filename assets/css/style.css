@@ -1,0 +1,42 @@
+body {
+    height: 1650px;
+    background: url("../images/LuckyCharms.jpg") no-repeat bottom center;
+    background-size: 1000px 1500px;
+}
+
+.jumbotron {
+    background: none
+}
+
+.lead {
+    margin-top: 20px;
+}
+
+.intro {
+    font-family: 'Boogaloo', cursive;
+    font-size: 175%;
+    color: #11D0F9;
+    /* text-shadow: 1px 1px 1px #606060; */
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-size: 125%;
+}
+
+.green-letters {
+    color: #71BF45;
+}
+.purple-letters  {
+    color: #A379B2;
+}
+.red-letters {
+    color: #DC2037;
+}
+.fancy-letters {
+    font-family: 'Boogaloo', cursive;
+}
+#answer {
+    font-family: 'Boogaloo', cursive;
+    text-transform: uppercase;
+}
