@@ -47,28 +47,20 @@ document.onkeyup = function (event) {
     // here we get the letter the user types
     var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
-    // check to make sure it's a letter
-    if (/[0-9-_ ]/.test(userGuess)) {
-        alert("That's not a letter");
-    }
-    else {
-        for (var i = 0; i < randomWord.length; i++) {
-            // if the random word contains the userGuessed letter
-            if (randomWord[i] === userGuess) {
-                // assign it to the letter
-                answerArray[i] = userGuess;
-            }
+    for (var i = 0; i < randomWord.length; i++) {
+        // if the random word contains the userGuessed letter
+        if (randomWord[i] === userGuess) {
+            // assign it to the letter
+            answerArray[i] = userGuess;
         }
-        // here we count how many guesses have been made
-        count--;
-        document.getElementById("counter").innerHTML = count;
-        document.getElementById("answer").innerHTML = answerArray.join(" ");
     }
+
+    count--;
+    document.getElementById("counter").innerHTML = count;
+    document.getElementById("answer").innerHTML = answerArray.join(" ");
 
     // here's what happens if you WIN
-    if (answerArray.includes("_")) {
-
-    } else {
+    if (!answerArray.includes("_")) {
         wins++;
         count = 12;
         document.getElementById('counter').innerHTML = count;
@@ -90,9 +82,9 @@ document.onkeyup = function (event) {
     // this makes sure letters arent entered in the array twice
     if (guessedArray.indexOf(userGuess) >= 0) {
 
-    } 
+    }
     // this adds the letters to the guessed letters array
-    else if (count >= 0 ) {
+    else if (count >= 0) {
         guessedArray.push(userGuess);
         document.getElementById('lettersGuessed').innerHTML = guessedArray.join(", ");
         console.log(guessedArray);
